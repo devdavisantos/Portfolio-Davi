@@ -9,9 +9,10 @@
 }
 
 body {
-    background-color: #333;
+    background-color: #000000;
 }
 
+/* Header */
 .logo {
     margin: 0 10rem;
     height: 40px;
@@ -19,7 +20,7 @@ body {
 
 #header-nav {
     height: 70px;
-    background-color: rgb(33, 33, 33);
+    background-color: #1c1d1a;
     border-bottom: 3px solid rgba(0, 4, 255, 0.824);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -67,6 +68,7 @@ body {
     width: 100%;
 }
 
+/* Home */
 .container-main{
     background: url("/img/background.png");
     width: 100%;
@@ -94,19 +96,12 @@ body {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     text-align: center;
     color: rgb(255, 255, 255);
 }
 
 .presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
     font-family: "Noto Sans", sans-serif;
 }
@@ -130,9 +125,6 @@ h1 {
 }
 
 .social-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 30px;
     padding: 10px 5px;
     position: relative;
@@ -169,13 +161,12 @@ h1 {
     right: -100px;
 }
 
+/* About */
 #about {
     background-color: rgba(0, 0, 0, 0.856);
     position: relative;
     z-index: 2;
-    /* mask-image: linear-gradient(to top, rgb(0, 0, 0) 1%, rgba(0, 0, 0, 0) 100%); */
-    /* -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 100%); */
-    background-image: linear-gradient(to top, rgb(17, 0, 255) 10%, rgba(255, 69, 0, 0) 70%);
+    background-image: linear-gradient(to top, rgb(34, 23, 179) 10%, rgba(255, 69, 0, 0) 70%);
 }
 
 #about::before {
@@ -206,6 +197,7 @@ h1 {
     letter-spacing: 3.6px;
     margin-bottom: 10px;
     font-family: "Montserrat";
+    font-style: italic;
 }
 
 .bar-detail {
@@ -228,9 +220,6 @@ h1 {
 }
 
 .about-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 40px;
   font-family: "Montserrat";
   font-size: 1.3rem;
@@ -253,17 +242,15 @@ h1 {
   text-align: justify;
 }
 
+/* Cards de Tecnologias */
 .cards {
-  display: flex;
   gap: 20px;
-  justify-content: center;
   margin: 20px 0;
-  flex-wrap: wrap;
 }
 
 .card {
-  width: 110px;
-  height: 140px;
+  width: 100px;
+  height: 130px;
   background-color: #333;
   border-radius: 10px;
   text-align: center;
@@ -294,7 +281,211 @@ h1 {
   font-weight: 600;
 }
 
+/* Projects */
+#projects {
+    background-color: rgb(10, 10, 10);
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%);
+}
 
+#projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgb(34, 23, 179), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: -1;
+}
+
+.title-content {
+    height: max-content;
+    padding: 110px 0;
+    color: #fff;
+    font-family: "Montserrat";
+    height: 100vh;
+    width: 100%;
+}
+
+.title2 p {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "Kanit";
+    font-style: italic;
+}
+
+.bar-detail2 {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.bar-detail2 .bar {
+  width: 20%;
+  height: 6px;
+  background: #0004ffd2;
+}
+
+.bar-detail2 .ball {
+  width: 6px;
+  height: 6px;
+  background: #0004ffd2;
+  margin-left: 4px;
+  border-radius: 50%;
+}
+
+.projects-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 40px;
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+  /* margin-left: -80px; */
+  gap: 50px;
+}
+
+.projects-text {
+  flex: 1;
+  text-align: justify;
+}
+
+
+/* Carrossel dos Projetos */
+
+
+/* Contact */
+#contact {
+    background-color: rgb(10, 10, 10);
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to top, rgb(34, 23, 179) 10%, rgba(255, 69, 0, 0) 70%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: -1;
+}
+
+.title-content {
+    height: max-content;
+    padding: 110px 0;
+    color: #fff;
+    font-family: "Montserrat";
+    height: 100vh;
+    width: 100%;
+}
+
+.title3 p {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "Kanit";
+    font-style: italic;
+}
+
+.bar-detail3 {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.bar-detail3 .bar {
+  width: 20%;
+  height: 6px;
+  background: #0004ffd2;
+}
+
+.bar-detail3 .ball {
+  width: 6px;
+  height: 6px;
+  background: #0004ffd2;
+  margin-left: 4px;
+  border-radius: 50%;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 40px;
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+  /* margin-left: -80px; */
+  gap: 50px;
+}
+
+.projects-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.davitai {
+    font-family: "Kanit";
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.social-link:hover {
+    color: #1da1f2;
+    transform: scale(1.01);
+}
+
+.social-link i {
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.2);
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1d1a;
+    border-top: 3px solid rgba(255, 255, 255, 0.824);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de Rolagem */
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
