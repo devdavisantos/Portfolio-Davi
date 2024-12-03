@@ -69,9 +69,9 @@
                 <section id="about">
                     <div class="about-main">
                         <div class="title-content container section">
-                            <div class="title">
-                                <p class="">SOBRE MIM</p>
-                                <div class="bar-detail">
+                            <div class="title-about">
+                                <p>SOBRE MIM</p>
+                                <div class="bar-detail-about">
                                     <div class="bar"></div>
                                     <div class="ball"></div>
                                     <div class="ball"></div>
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="about-text">
                                     <p>
-                                        Sou um desenvolvedor que atua em várias tecnologias, com ênfase em HTML, CSS, SASS, JavaScript e C# / ASP.NET MVC. Tenho experiência em desenvolver API's, interfaces web responsivas e dinâmicas, focando sempre na usabilidade e na performance.
+                                        Sou um desenvolvedor que tem experiência em várias tecnologias, com ênfase em HTML, CSS, SASS, JavaScript e C# / ASP.NET MVC. Tenho experiência em desenvolver API's, interfaces web responsivas e dinâmicas, focando sempre na usabilidade e na performance.
                                     </p>
                                     <p>
                                         Acredito em escrever código limpo, organizado e alinhado às melhores práticas de desenvolvimento, buscando sempre melhorar a qualidade do software e garantir uma experiência de usuário intuitiva. Trabalho bem em equipe, sou proativo em aprender novas tecnologias e sempre estou buscando aperfeiçoar minhas habilidades para enfrentar novos desafios no mundo da tecnologia.
@@ -138,6 +138,7 @@
                                 <div class="card">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MONGODB">
                                     <p>MONGODB</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,9 +153,20 @@
                     
                     <div class="about-general">
                         <div class="title-content container section page2">
-                            <div class="testpage">
-                                <h2>Testpage - Página 1</h2>
-                                <p>Conteúdo de teste da primeira página.</p>
+                            <div class="title-know">
+                                <p>MEUS CONHECIMENTOS</p>
+                                <div class="bar-detail-know">
+                                    <div class="bar"></div>
+                                    <div class="ball"></div>
+                                    <div class="ball"></div>
+                                    <div class="ball"></div>
+                                </div>
+                            </div>
+                            <div class="know-content d-flex align-items-center justify-content-between">
+                                <div class="testpage">
+                                    <h2>Testpage - Página 1</h2>
+                                    <p>Conteúdo de teste da primeira página.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,9 +174,9 @@
                 </section> 
                 <section id="projects">
                     <div class="title-content container section">
-                        <div class="title2">
+                        <div class="title-project">
                             <p>Projetos</p>
-                            <div class="bar-detail2">
+                            <div class="bar-detail-project">
                                 <div class="bar"></div>
                                 <div class="ball"></div>
                                 <div class="ball"></div>
@@ -340,9 +352,9 @@
                             <p>Davitaki pronto para desenvolver sistemas inovadores e soluções</p>
                             <p>tecnológicas que transformam ideias em realidade! 🚀</p>
                         </div>
-                        <div class="title3">
+                        <div class="title-davitai">
                             <p>Contato</p>
-                            <div class="bar-detail3">
+                            <div class="bar-detail-contact">
                                 <div class="bar"></div>
                                 <div class="ball"></div>
                                 <div class="ball"></div>
@@ -391,35 +403,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/Assets/js/index.js"></script>
-    <script>
-const prevBtn = document.querySelector(".prev-btn-about");
-        const nextBtn = document.querySelector(".next-btn-about");
-        const testpage = document.querySelector(".testpage");
-        const aboutSection = document.querySelector("#about");
-
-        let isTestPageVisible = false;
-
-        // Exibir a testpage e ocultar a seção principal
-        nextBtn.addEventListener("click", () => {
-            if (!isTestPageVisible) {
-                aboutSection.style.display = "none"; // Ocultar a section original
-                testpage.classList.add("active"); // Exibir a testpage
-                prevBtn.style.display = "inline-block"; // Exibir o botão de retroceder
-                nextBtn.style.display = "none"; // Ocultar o botão de avançar
-                isTestPageVisible = true;
-            }
-        });
-
-        // Voltar para a seção sobre
-        prevBtn.addEventListener("click", () => {
-            if (isTestPageVisible) {
-                aboutSection.style.display = "block"; // Exibir a section original
-                testpage.classList.remove("active"); // Ocultar a testpage
-                prevBtn.style.display = "none"; // Ocultar o botão de retroceder
-                nextBtn.style.display = "inline-block"; // Exibir o botão de avançar
-                isTestPageVisible = false;
-            }
-        });
-    </script>
 </body>
 </html>
