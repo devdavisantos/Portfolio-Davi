@@ -300,6 +300,14 @@ h1 {
   gap: 50px;
 }
 
+.cloud img, 
+.front-end img, 
+.back-end img, 
+.database img, 
+.games img {
+    height: 40px;
+}
+
 /* Buttons */
 .about-btn {
     position: absolute;
