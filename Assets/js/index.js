@@ -46,3 +46,42 @@ containers.forEach((container, index) => {
         }
     });
 });
+
+// Carregamento dos cards do projeto json
+    fetch('cards.json')
+        .then(response => response.json())
+        .then(data => {
+            const websitesContainer = document.getElementById("#websites-cards");
+            const gamesContainer = document.getElementById("#games-cards");
+
+            if (!websitesContainer || !gamesContainer) {
+                console.error("⚠️ Containers de projetos não encontrados!");
+                return;
+            }
+
+            function createCard(project) {
+                const card = document.createElement("div");
+                card.classList.add("card-project");
+
+                card.innerHTML = `
+                    <img src="${project.image}" alt="${project.title}" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">${project.title}</h3>
+                        <p class="card-text">${project.description}</p>
+                    </div>
+                `;
+
+                return card;
+            }
+
+            // Adiciona os cards dos websites
+            data.websites.forEach(project => {
+                websitesContainer.appendChild(createCard(project));
+            });
+
+            // Adiciona os cards dos jogos
+            data.games.forEach(project => {
+                gamesContainer.appendChild(createCard(project));
+            });
+        })
+        .catch(error => console.error('❌ Erro ao carregar JSON:', error));

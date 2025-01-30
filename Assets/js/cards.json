@@ -1,0 +1,26 @@
+{
+    "websites": [
+        {
+            "title": "Meu Site",
+            "description": "Um site incrível sobre tecnologia.",
+            "image": "img/photo.png"
+        },
+        {
+            "title": "Portfólio Dev",
+            "description": "Meu portfólio pessoal.",
+            "image": "assets/images/portfolio.jpg"
+        }
+    ],
+    "games": [
+        {
+            "title": "Space Shooter",
+            "description": "Um jogo de naves espaciais.",
+            "image": "assets/images/game1.jpg"
+        },
+        {
+            "title": "RPG Fantasia",
+            "description": "Uma aventura épica em um mundo de fantasia.",
+            "image": "assets/images/game2.jpg"
+        }
+    ]
+}
